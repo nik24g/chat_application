@@ -1,1 +1,1 @@
-web: gunicorn pchat.asgi
+web: gunicorn pchat.wsgi
