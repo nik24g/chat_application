@@ -57,14 +57,12 @@ protobuf==3.14.0
 psycopg2==2.8.6
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/nitin/pipwin/PyAudio-0.2.11-cp38-cp38-win32.whl
 pycares==3.1.1
 pycodestyle==2.6.0
 pycparser==2.20
 pycryptodomex==3.10.1
 pygame==2.0.1
 pyinstaller==4.2
-pyinstaller-hooks-contrib==2020.11
 pyjsparser==2.7.1
 PyJWT==2.0.1
 pylint==2.6.0
