@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import django_heroku
 from pathlib import Path
+import redis
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(00u6*mod5*_2v$a1@nov#0u%xo_p#km5cy_%jy3x-fr^95xz2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://youroom.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -129,15 +130,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+redis.Redis(host='127.0.0.1', port=6379, db=0)
 
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('https://youroom.herokuapp.com', 6379)],
+            "hosts": [('127.0.0.1', 6379)],
         },
     },
 }
+
 
 django_heroku.settings(locals())

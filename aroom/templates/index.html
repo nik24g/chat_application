@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Chat Rooms</title>
-</head>
-<body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">YouChat connecting to the World</h1>
+      <p class="col-lg-10 fs-4">A simplify way to chat with your friends in a group. YouChat provides simple and
+        effective way to communicate. Here We serve you a history less chatting plateform. Nobody can get record of chat
+        history.</p>
+    </div>
+    {% comment %} <div class="col-10 mx-auto col-lg-5">
+      <form class="p-5 border rounded-3 bg-light">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        <hr class="my-4">
+        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+      </form>
+    </div> {% endcomment %}
+  </div>
+</div>
+<h1>What chat room would you like to enter?</h1>
+<div><input id="room-name-input" type="text" size="100"></div>
+<div class="submit"><input id="room-name-submit" type="button" value="Enter"></div>
 
-    <script>
-        document.querySelector('#room-name-input').focus();
-        document.querySelector('#room-name-input').onkeyup = function(e) {
-            if (e.keyCode === 13) {  // enter, return
-                document.querySelector('#room-name-submit').click();
-            }
-        };
+<script>
+  document.querySelector('#room-name-input').focus();
+  document.querySelector('#room-name-input').onkeyup = function (e) {
+    if (e.keyCode === 13) {  // enter, return
+      document.querySelector('#room-name-submit').click();
+    }
+  };
 
-        document.querySelector('#room-name-submit').onclick = function(e) {
-            var roomName = document.querySelector('#room-name-input').value;
-            window.location.pathname = '' + roomName + '/';
-        };
-    </script>
+  document.querySelector('#room-name-submit').onclick = function (e) {
+    var roomName = document.querySelector('#room-name-input').value;
+    window.location.pathname = '' + roomName + '/';
+  };
+</script>
+{% endblock body %}
 </body>
+
 </html>
