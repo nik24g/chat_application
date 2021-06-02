@@ -127,14 +127,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config("DB_NAME"),
-        'USER': config("DB_USER"),
-        'PASSWORD': config("DB_PASSWORD"),
+        'NAME': "django_db",
+        'USER': "django",
+        'PASSWORD': "password",
         'HOST': 'localhost',
         'PORT': '',
     }
