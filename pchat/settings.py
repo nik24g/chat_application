@@ -28,11 +28,11 @@ SECRET_KEY = '(00u6*mod5*_2v$a1@nov#0u%xo_p#km5cy_%jy3x-fr^95xz2'
 
 ALLOWED_HOSTS = ["143.198.164.123",]
 
-ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
+# ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
 WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
 
-ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
+# ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
 
 
 
@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
 # added
 # Channels
-# ASGI_APPLICATION = 'pchat.asgi.application'
+ASGI_APPLICATION = 'pchat.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# ROOT_URLCONF = 'pchat.urls'
+ROOT_URLCONF = 'pchat.urls'
 
 TEMPLATES = [
     {
