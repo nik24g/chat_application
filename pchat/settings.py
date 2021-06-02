@@ -24,6 +24,8 @@ from decouple import config
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
+SECRET_KEY = config("SECRET_KEY")
+
 ALLOWED_HOSTS = ["206.189.137.10",]
 
 ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
