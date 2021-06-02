@@ -24,7 +24,7 @@ from decouple import config
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = '(00u6*mod5*_2v$a1@nov#0u%xo_p#km5cy_%jy3x-fr^95xz2'
 
 ALLOWED_HOSTS = ["206.189.137.10",]
 
