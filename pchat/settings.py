@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ["64.227.17.213",]
 
 WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
 
-# ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
+ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
 
 
 
@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
 # added
 # Channels
-ASGI_APPLICATION = 'pchat.asgi.application'
+# ASGI_APPLICATION = 'pchat.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
