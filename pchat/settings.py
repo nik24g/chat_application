@@ -26,7 +26,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 SECRET_KEY = '(00u6*mod5*_2v$a1@nov#0u%xo_p#km5cy_%jy3x-fr^95xz2'
 
-ALLOWED_HOSTS = ["143.198.164.123",]
+ALLOWED_HOSTS = ["64.227.17.213",]
 
 # ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
@@ -167,9 +167,9 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'CodingWithMitch Team <noreply@codingwithmitch.com>'
 
 
-BASE_URL = "http://143.198.164.123"
+BASE_URL = "http://64.227.17.213"
 
-redis.Redis(host='143.198.164.123', port=6379, db=0)
+redis.Redis(host='64.227.17.213', port=6379, db=0)
 
 CHANNEL_LAYERS = {
     'default': {
