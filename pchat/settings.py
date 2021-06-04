@@ -27,13 +27,13 @@ DEBUG = False
 
 SECRET_KEY = '(00u6*mod5*_2v$a1@nov#0u%xo_p#km5cy_%jy3x-fr^95xz2'
 
-ALLOWED_HOSTS = ["64.227.17.213",]
+ALLOWED_HOSTS = ["143.244.146.173",]
 
-# ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
+ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
-# WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
+WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
 
-# ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
+ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
 
 
 
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
 # added
 # Channels
-ASGI_APPLICATION = 'pchat.asgi.application'
+# ASGI_APPLICATION = 'pchat.asgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pchat.wsgi.application'
+# WSGI_APPLICATION = 'pchat.wsgi.application'
 
 
 # Database
@@ -168,9 +168,9 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'CodingWithMitch Team <noreply@codingwithmitch.com>'
 
 
-BASE_URL = "http://64.227.17.213"
+BASE_URL = "http://143.244.146.173"
 
-redis.Redis(host='64.227.17.213', port=6379, db=0)
+redis.Redis(host='143.244.146.173', port=6379, db=0)
 
 CHANNEL_LAYERS = {
     'default': {
